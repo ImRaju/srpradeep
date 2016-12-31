@@ -1,0 +1,43 @@
+{
+  "name": "srapi",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node .",
+    "pretest": "eslint .",
+    "posttest": "nsp check"
+  },
+  "dependencies": {
+    "compression": "^1.0.3",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.1",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.14.2",
+    "helmet": "^3.1.0",
+    "html-pdf": "^2.1.0",
+    "jade": "^1.11.0",
+    "loopback": "^2.36.0",
+    "loopback-boot": "^2.23.0",
+    "loopback-component-explorer": "^2.7.0",
+    "loopback-component-passport": "^2.3.0",
+    "loopback-component-storage": "^1.10.0",
+    "loopback-connector-mongodb": "^1.17.0",
+    "loopback-connector-rest": "^2.1.0",
+    "loopback-datasource-juggler": "^2.53.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth": "^1.0.0",
+    "passport-linkedin-oauth2": "^1.4.1",
+    "serve-favicon": "^2.3.2"
+  },
+  "devDependencies": {
+    "@mean-expert/loopback-sdk-builder": "^2.1.0-rc.6",
+    "eslint": "^3.12.2",
+    "nsp": "^2.6.2"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "description": "srapi"
+}

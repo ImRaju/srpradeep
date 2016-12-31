@@ -1,0 +1,69 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "regdb": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "skillregister",
+    "name": "regdb",
+    "connector": "mongodb"
+  },
+  "transient": {
+    "name": "transient",
+    "connector": "transient"
+  },
+  "emailDs": {
+    "name": "emailDs",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp-relay.sendinblue.com",
+        "secure": false,
+        "port": 587,
+        "tls": {
+          "rejectUnauthorized": false
+        },
+        "auth": {
+          "user": "contact@skillregister.in",
+          "pass": "h8wcrPakNAUFEn4D"
+        }
+      }
+    ]
+  },
+  "scoreService": {
+    "name": "scoreService",
+    "baseURL": "http://score.api.sprytechies.net:3002",
+    "crud": false,
+    "operations": [
+      {
+        "template": {
+          "method": "POST",
+          "url": "http://score.api.sprytechies.net:3002/api/{path}",
+          "headers": {
+            "accept": "application/json",
+            "content-type": "application/json"
+          },
+          "query": "{query}",
+          "body": "{body}"
+        },
+        "functions": {
+          "create": [
+            "path",
+            "body",
+            "query"
+          ]
+        }
+      }
+    ],
+    "connector": "rest"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "/opt/srapi/storage"
+  }
+}

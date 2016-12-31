@@ -1,0 +1,37 @@
+{
+  "name": "projbit",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "project": {
+      "type": "string",
+      "required": true
+    },
+    "from": {
+      "type": "date"
+    },
+    "upto": {
+      "type": "date"
+    },
+    "isCurrent": {
+      "type": "boolean",
+      "default": false
+    },
+    "role": {
+      "type": "string",
+      "required": true,
+      "comments": "project role"
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

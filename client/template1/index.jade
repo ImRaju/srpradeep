@@ -1,0 +1,88 @@
+doctype html
+html
+  head
+    title Curriculum Vitae
+    meta(name='viewport', content='width=device-width')
+    meta(name='description', content='The Curriculum Vitae of Joe Bloggs.')
+    meta(charset='UTF-8')
+    link(type='text/css', rel='stylesheet', href='css/style.css')
+    link(href='css/Rokkitt-Lato.css', rel='stylesheet', type='text/css')
+    //if lt IE 9
+      script(src='//html5shiv.googlecode.com/svn/trunk/html5.js')
+  body#top
+    #cv
+      .mainDetails
+        if info.pic
+          #headshot
+            img(src='#{info.pic}', alt='#{info.name}')
+        #name
+          h1 #{info.name}
+          h2 #{info.title}
+        #contactDetails
+          ul
+            li
+              | e: 
+              a(href='mailto:#{info.contacts.email}', target='_blank') #{info.contacts.email}
+            //li
+              | w: 
+              a(href='http://www.bloggs.com') www.bloggs.com
+            li m: #{info.contacts.phone}
+        .clear
+      #mainArea
+        section
+          article
+            .sectionTitle
+              h1 Objective
+            .sectionContent
+              p
+              if info.tagline
+                | #{info.tagline}
+          .clear
+        if info.experience
+          section
+            .sectionTitle
+              h1 Experience
+            .sectionContent
+              each exp in info.experience
+                article
+                  h2 #{exp.title} at #{exp.company}
+                  p.subDetails #{exp.from.toLocaleDateString('en-US',{year:'2-digit', month:'short'})} - #{exp.upto.toLocaleDateString('en-US',{year:'2-digit', month:'short'})}
+                  p
+                  if exp.meta.desc
+                    | #{exp.meta.desc}
+            .clear
+        if info.skills
+          section
+            .sectionTitle
+              h1 Key Skills
+            .sectionContent
+              ul.keySkills
+                each skill in info.skills
+                  li #{skill.code}
+            .clear
+        if info.education
+          section
+            .sectionTitle
+              h1 Education
+            .sectionContent
+              each edu in info.education
+                article
+                  h2 #{edu.school}
+                  p.subDetails #{edu.course}
+                  p
+                  if edu.meta.desc
+                    | #{edu.meta.desc}
+            .clear
+        if info.project
+          section
+            .sectionTitle
+              h1 Project
+            .sectionContent
+              each pro in info.project
+                article
+                  h2 #{pro.project}
+                  p.subDetails #{pro.from.toLocaleDateString('en-US',{year:'2-digit', month:'short'})} - #{pro.upto.toLocaleDateString('en-US',{year:'2-digit', month:'short'})}
+                  p
+                  if pro.meta.desc
+                    | #{pro.meta.desc}
+            .clear

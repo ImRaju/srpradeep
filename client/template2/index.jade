@@ -1,0 +1,181 @@
+doctype html
+// saved from url=(0039)http://kamsolutions.pl/projects/resume/
+html(lang='en')
+  head
+    //meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    //meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width')
+    meta(charset='UTF-8')
+    title 3ColorResume
+    link(type='text/css', href='css/bootstrap.min.css', rel='stylesheet')
+    link(type='text/css', href='css/font-awesome.min.css', rel='stylesheet')
+    link(type='text/css', rel='stylesheet', href='css/main.css')
+  body
+    .container
+      .row
+        .col-xs-12
+          #photo-header.text-center
+            // PHOTO (AVATAR)
+            #photo
+              if info.pic
+                img(src='#{info.pic}', alt='#{info.name}')
+              else
+                img(src='http://#{info.assetPath}/#{info.cvdir}/image/avatar.jpg', alt='avatar')
+            #text-header
+              h1
+                | Hello,
+                br
+                |  my name is 
+                span #{info.name}
+      .row
+        .col-xs-7.col-sm-7
+          // ABOUT ME
+          .box
+            h2 About Me
+            p
+            if info.summary
+              | #{info.summary}
+          // EDUCATION
+          if info.education
+            .box
+              h2 Education
+              ul#education.clearfix
+                each edu in info.education
+                  li
+                    .year.pull-left #{edu.upto.getFullYear()}
+                    .description.pull-right
+                      h3 #{edu.type} in #{edu.course}
+                      p
+                      if edu.meta.desc
+                        | #{edu.meta.desc}
+          // EXPERIENCES
+          if info.experience
+            .box
+              h2 Experiences
+              .job.clearfix
+                each exp in info.experience
+                  .col-xs-3
+                    .where #{exp.company}
+                    .year #{exp.from.toLocaleDateString('en-US',{year:'2-digit', month:'short'})} - #{exp.upto.toLocaleDateString('en-US',{year:'2-digit', month:'short'})}
+                  .col-xs-9.experience-right
+                    .profession #{exp.title}
+                    .description
+                    if exp.meta.desc
+                      | #{exp.meta.desc}
+            // Projects
+            if info.project
+              .box
+                h2 Projects
+                .job.clearfix
+                  each pro in info.project
+                    .col-xs-3
+                      .year #{pro.from.toLocaleDateString('en-US',{year:'2-digit', month:'short'})} - #{pro.upto.toLocaleDateString('en-US',{year:'2-digit', month:'short'})}
+                    .col-xs-9.experience-right
+                      .profession #{pro.project}
+                      .description
+                      if pro.meta.desc
+                        | #{pro.meta.desc}
+          
+        .col-xs-5.col-sm-5
+          // CONTACT
+          if info.contacts
+            .box.clearfix
+              h2 Contact
+              if info.contacts.phone
+                .contact-item
+                  .icon.pull-left.text-center
+                    span.fa.fa-phone.fa-fw
+                  .title.only.pull-right #{info.contacts.phone}
+              if info.contacts.email
+                .contact-item
+                  .icon.pull-left.text-center
+                    span.fa.fa-envelope.fa-fw
+                  .title.only.pull-right #{info.contacts.email}
+              if info.contacts.tw
+                .contact-item
+                  .icon.pull-left.text-center
+                    span.fa.fa-twitter.fa-fw
+                  .title.pull-right Twitter
+                  .description.pull-right #{info.contacts.tw}
+              if info.contacts.fb
+                .contact-item
+                  .icon.pull-left.text-center
+                    span.fa.fa-facebook.fa-fw
+                  .title.pull-right Facebook
+                  .description.pull-right #{info.contacts.fb}
+              if info.contacts.in
+                .contact-item
+                  .icon.pull-left.text-center
+                    span.fa.fa-linkedin.fa-fw
+                  .title.pull-right Linked in
+                  .description.pull-right #{info.contacts.in}
+              if info.contacts.skype
+                .contact-item
+                  .icon.pull-left.text-center
+                    span.fa.fa-skype.fa-fw
+                  .title.pull-right Skype
+                  .description.pull-right #{info.contacts.skype}
+              if info.contacts.git
+                .contact-item
+                  .icon.pull-left.text-center
+                    span.fa.fa-github.fa-fw
+                  .title.pull-right Github
+                  .description.pull-right #{info.contacts.git}
+          // SKILLS
+          if info.skills
+            .box
+              h2 Skills
+              .skills
+                each skill in info.skills
+                  .item-skills(style='overflow: hidden; width: calc(10% * #{skill.level}); ') #{skill.code}
+                .skills-legend.clearfix
+                  .legend-left.legend Beginner
+                  .legend-left.legend
+                    span Proficient
+                  .legend-right.legend
+                    span Expert
+                  .legend-right.legend Master
+          // LANGUAGES
+          if info.language
+            .box
+              h2 Languages
+              each lang in info.language
+                .hobby #{lang.name}
+          // AWARDS
+          if info.awards
+            .box
+              h2 Awards
+              #language-skills
+                .skill
+                  | Awards1 
+                  .icons.pull-right
+                    .icons-red(style='width: 80%; overflow: hidden; height: 14px;')
+                .skill
+                  | Awards2 
+                  .icons.pull-right
+                    .icons-red(style='width: 60%; overflow: hidden; height: 14px;')
+          // CERTIFICATES
+          if info.cirtificates
+            .box
+              h2 Certificates
+              #language-skills
+                .skill
+                  | Certificates1 
+                  .icons.pull-right
+                    .icons-red(style='width: 80%; overflow: hidden; height: 14px;')
+                .skill
+                  | Certificates2 
+                  .icons.pull-right
+                    .icons-red(style='width: 60%; overflow: hidden; height: 14px;')
+          // OTHER
+          if info.meta
+            .box
+              h2 Other
+              each value, key in info.meta
+                #language-skills
+                  .skill
+                    b #{key}: 
+                    | #{value} 
+                    .icons.pull-right
+                      .icons-red(style='width: 80%; overflow: hidden; height: 14px;')
+                  

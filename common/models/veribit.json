@@ -1,0 +1,35 @@
+{
+  "name": "veribit",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "string"
+    },
+    "verifiedon": {
+      "type": "date"
+    },
+    "verifiedby": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string",
+      "comments": "verification type"
+    },
+    "process": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,53 @@
+{
+  "name": "expbit",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "from": {
+      "type": "date",
+      "required": true
+    },
+    "upto": {
+      "type": "date",
+      "required": true
+    },
+    "isCurrent": {
+      "type": "boolean",
+      "default": false
+    },
+    "status": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "required": true,
+      "comments": "job type"
+    },
+    "title": {
+      "type": "string",
+      "comments": ""
+    },
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "job": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "locbit"
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

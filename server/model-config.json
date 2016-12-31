@@ -1,0 +1,239 @@
+{
+  "_meta": {
+    "sources": [
+      "./node_modules/loopback-component-passport/lib/models",
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "regdb",
+    "public": true,
+    "options": {
+      "emailVerificationRequired": true
+    }
+  },
+  "AccessToken": {
+    "dataSource": "regdb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "regdb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "regdb",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "regdb",
+    "public": false
+  },
+  "person": {
+    "dataSource": "regdb",
+    "public": true
+  },
+  "UserCredential": {
+    "dataSource": "regdb",
+    "public": false
+  },
+  "UserIdentity": {
+    "dataSource": "regdb",
+    "public": false
+  },
+  "edubit": {
+    "dataSource": "regdb",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "expbit": {
+    "dataSource": "regdb",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "certbit": {
+    "dataSource": "regdb",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "veribit": {
+    "dataSource": "transient",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "skillbit": {
+    "dataSource": "transient",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "contactbit": {
+    "dataSource": "transient",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "permsbit": {
+    "dataSource": "regdb",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "profilebit": {
+    "dataSource": "regdb",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "projbit": {
+    "dataSource": "regdb",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "dimension": {
+    "dataSource": "regdb",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "country": {
+    "dataSource": "regdb",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "state": {
+    "dataSource": "regdb",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "city": {
+    "dataSource": "regdb",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "skill": {
+    "dataSource": "regdb",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "business": {
+    "dataSource": "regdb",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "school": {
+    "dataSource": "regdb",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "job": {
+    "dataSource": "regdb",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "course": {
+    "dataSource": "regdb",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "certificate": {
+    "dataSource": "regdb",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "verification": {
+    "dataSource": "regdb",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "permission": {
+    "dataSource": "regdb",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "projrole": {
+    "dataSource": "regdb",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "location": {
+    "dataSource": "db",
+    "public": true
+  },
+  "locbit": {
+    "dataSource": "db",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Email": {
+    "dataSource": "emailDs"
+  },
+  "volbit": {
+    "dataSource": "regdb",
+    "public": false
+  },
+  "langbit": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "awardbit": {
+    "dataSource": "regdb",
+    "public": false
+  },
+  "publbit": {
+    "dataSource": "regdb",
+    "public": false
+  },
+  "container": {
+    "dataSource": "storage",
+    "public": true
+  },
+  "accountbit": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "cvtpl": {
+    "dataSource": "regdb",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "cvblock": {
+    "dataSource": "regdb",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "resume": {
+    "dataSource": "regdb",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  }
+}

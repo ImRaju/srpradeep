@@ -1,0 +1,35 @@
+{
+  "name": "cvblock",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type": {
+      "type": "string",
+      "comments": "section code from dimension"
+    },
+    "workstream": {
+      "type": [
+        "string"
+      ],
+      "comments": "dimension"
+    },
+    "explvl": {
+      "type": [
+        "string"
+      ],
+      "comments": "dimension"
+    },
+    "assets": {
+      "type": "object",
+      "comments": "pathtype, filepath, tpldata-obj"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

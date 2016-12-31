@@ -1,0 +1,38 @@
+{
+  "restApiRoot": "/api",
+  "host": "0.0.0.0",
+  "port": 3003,
+  "remoting": {
+    "context": {
+      "enableHttpContext": true
+    },
+    "rest": {
+      "normalizeHttpPath": false,
+      "xml": false
+    },
+    "json": {
+      "strict": false,
+      "limit": "100kb"
+    },
+    "urlencoded": {
+      "extended": true,
+      "limit": "100kb"
+    },
+    "cors": false,
+    "errorHandler": {
+      "disableStackTrace": false
+    }
+  },
+  "legacyExplorer": false,
+  "cvTempDirName": "template",
+  "cvTempDirPath": "./template",
+  "cvTplBase": "file:///home/pradeep/work/code/srapi/client/template",
+  "emailConfig": {
+    "type": "email",
+    "from": "'SkillRegister <contact@skillregister.in>'",
+    "subject": "Thanks for registering.",
+    "redirect": "http://localhost/signin"
+  },
+  "webResetPassPath": "localhost/reset-password",
+  "assetPath": "localhost/api"
+}

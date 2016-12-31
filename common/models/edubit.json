@@ -1,0 +1,61 @@
+{
+  "name": "edubit",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "school": {
+      "type": "string",
+      "required": true
+    },
+    "from": {
+      "type": "date",
+      "required": true
+    },
+    "upto": {
+      "type": "date"
+    },
+    "isCurrent": {
+      "type": "boolean",
+      "default": false
+    },
+    "course": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true,
+      "comments": "course dimension"
+    },
+    "title": {
+      "type": "string",
+      "comments": ""
+    },
+    "edutype": {
+      "type": "string",
+      "comments": "student type"
+    },
+    "cgpi": {
+      "type": "number",
+      "required": true
+    },
+    "cgpitype": {
+      "type": "string",
+      "comments": "dimension"
+    },
+    "location": {
+      "type": "locbit"
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

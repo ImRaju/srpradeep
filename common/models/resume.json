@@ -1,0 +1,32 @@
+{
+  "name": "resume",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "cvtpl": {
+      "type": "object",
+      "comments": "customised template"
+    },
+    "cvblocks": {
+      "type": [
+        "object"
+      ],
+      "comments": "customised sections"
+    },
+    "title": {
+      "type": "string"
+    },
+    "meta": {
+      "type": "object",
+      "comments": "uri, access"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

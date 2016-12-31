@@ -1,0 +1,40 @@
+{
+  "name": "accountbit",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "accessId": {
+      "type": "string"
+    },
+    "accessCode": {
+      "type": "string"
+    },
+    "privacy": {
+      "type": "string",
+      "default": "private"
+    },
+    "syncCanReplace": {
+      "type": "boolean",
+      "default": false
+    },
+    "fb": {
+      "type": "boolean",
+      "default": false
+    },
+    "gplus": {
+      "type": "boolean",
+      "default": false
+    },
+    "in": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,44 @@
+{
+  "name": "profilebit",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "skills": {
+      "type": [
+        "skillbit"
+      ]
+    },
+    "language": {
+      "type": [
+        "langbit"
+      ]
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "stats": {
+      "type": "object",
+      "comments": "profile statistics"
+    },
+    "meta": {
+      "type": "object",
+      "comments": "needs cleaning"
+    },
+    "type": {
+      "type": "string",
+      "required": true,
+      "comments": "dimension"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

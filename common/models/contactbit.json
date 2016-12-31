@@ -1,0 +1,31 @@
+{
+  "name": "contactbit",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "contact": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "string",
+      "comments": "dimension"
+    },
+    "status": {
+      "type": "string",
+      "comments": "isactive"
+    },
+    "type": {
+      "type": "string",
+      "comments": "user preference type"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

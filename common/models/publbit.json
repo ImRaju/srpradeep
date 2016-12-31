@@ -1,0 +1,33 @@
+{
+  "name": "publbit",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "authors": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
